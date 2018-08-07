@@ -9,7 +9,12 @@ function mengelompokkanAngka(arr) {
   var lipat3 = [];
 
   for(i = 0; i < arr.length; i++) {
-    if(arr[i] % 2 == 0) {
+
+    if(arr[i] % 3 == 0) {
+      lipat3.push(arr[i]);
+    }
+
+    else if(arr[i] % 2 == 0) {
       genap.push(arr[i]);
     }
 
@@ -17,9 +22,6 @@ function mengelompokkanAngka(arr) {
       ganjil.push(arr[i]);
     }
 
-    if(arr[i] % 3 == 0) {
-      lipat3.push(arr[i]);
-    }
   }
   parent.push(genap, ganjil, lipat3);
   return parent;
