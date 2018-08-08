@@ -13,6 +13,11 @@ function shoppingTime(memberId, money) {
     listPurchased: []
   }
 
+if(memberId === undefined) {
+  result = 'Mohon maaf, toko X hanya berlaku untuk member saja';
+}
+
+else if(memberId.length >= 1) {
   for (i = 0; i < products.productName.length; i++) {
     if (moneyTemp > products.productPrice[i]) {
       result.listPurchased.push(products.productName[i]);
@@ -20,6 +25,11 @@ function shoppingTime(memberId, money) {
       moneyTemp - products.productPrice[0];
     }
   }
+}
+
+else {
+  result = 'Mohon maaf, toko X hanya berlaku untuk member saja';
+}
 
   return result;
 }
