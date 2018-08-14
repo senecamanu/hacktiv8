@@ -3,9 +3,9 @@ function palindrome(input) {
 
 //if-else
   if (splitInput === input) {
-    return 'true';
+    return true;
   }
   else {
-    return 'false';
+    return false;
   }
  }

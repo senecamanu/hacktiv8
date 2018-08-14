@@ -5,37 +5,42 @@ function countProfit(shoppers) {
                    ];
 
   // you can only write your code here!
-
 var result = [];
 
+//masukin information kesini, nanti tinggal push
+  for(let i = 0; i < listBarang.length; i++) {
+    var shoppersArray = [];
+    var leftOverNum = listBarang[i][2];
+    var totalProfitFinal = 0;
 
-//buat yang kosong, error handlingnya gini
-if (shoppers[0] === undefined) {
-  result;
-}
+    //plugging in informations for each products
+    for (let c = 0; c < shoppers.length; c++) {
+      if(shoppers[c].product == listBarang[i][0]) {
+        if(shoppers[c].amount <= leftOverNum) {
+          shoppersArray.push(shoppers[c].name);
+          leftOverNum = leftOverNum - shoppers[c].amount;
+          totalProfitFinal = shoppers[c].amount * listBarang[i][1];
+        }
+      }
+    }
 
-//nah ini buat ngerjain benerannya
-else {
+    //the actual result for each products
+    var tempResult = {product: listBarang[i][0],
+                      shoppers: shoppersArray,
+                      leftOver: leftOverNum,
+                      totalProfit: totalProfitFinal
+                      }
 
-  for (let i = 0; i < listBarang.length; i++) {
-    var eachProduct = {
-      product: listBarang[i][0],
-      shoppers: place,
-      leftOver: place,
-      totalProfit: place,
-    };
-
-
-
-    result.push(eachProduct);
+    result.push(tempResult);
   }
+
+  if (shoppers.length <= 0) {
+    result = [];
+  }
+  return result;
 }
 
-return result;
-}
-
-
-// TESTING TESTING TETOTET (ada 4 btw testingnya)
+// TEST CASES
 console.log(countProfit([{name: 'Windi', product: 'Sepatu Stacattu', amount: 2}, {name: 'Vanessa', product: 'Sepatu Stacattu', amount: 3}, {name: 'Rani', product: 'Sweater Uniklooh', amount: 2}]));
 //[ { product: 'Sepatu Stacattu',
 //   shoppers: [ 'Windi', 'Vanessa' ],

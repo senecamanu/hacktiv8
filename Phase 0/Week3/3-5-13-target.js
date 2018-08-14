@@ -25,7 +25,7 @@ function targetTerdekat(arr){
     distance = 0;
   }
 
-  console.log(distance);
+  return distance;
 }
 
 
