@@ -1,3 +1,19 @@
+function highestScore (students) {
+  // Code disini
+  var result = {}
+  for (let i = 0; i < students.length; i++) {
+    // moving it out from GOD DAMN OBJECTS
+    var name = students[i].name;
+    var score = students[i].score;
+    var batch = students[i].class;
+
+    if (result[students[i].class] === undefined) {
+      result[batch] = {name: name, score: score}
+    }
+  }
+  return result;
+}
+
 // TEST CASE
 console.log(highestScore([
   {
