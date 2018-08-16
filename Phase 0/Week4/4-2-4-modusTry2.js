@@ -16,11 +16,17 @@ function cariModus(arr) {
               }
           }
 
-      if (modes.length == arr.length) {
-        return -1;
+      var testCounter = false;
+      for (let c = 0; c < modes.length; c++) {
+        if (modes[0] == arr[c]) {
+          testCounter = true;
+        }
+        else {
+          testCounter = false;
+        }
       }
 
-      else if () {
+      if (modes.length == arr.length || testCounter == true) {
         return -1;
       }
 
