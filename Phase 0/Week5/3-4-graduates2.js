@@ -1,7 +1,3 @@
-function graduates (students) {
-  // Code disini
-}
-
 console.log(graduates([
   {
     name: 'Dimitri',
