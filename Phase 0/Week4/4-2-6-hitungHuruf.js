@@ -1,4 +1,5 @@
 function hitungHuruf(kata) {
+  
 }
 
 // TEST CASES
