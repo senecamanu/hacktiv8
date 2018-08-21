@@ -1,5 +1,9 @@
 function balikKata(a) {
-    return a.split("").reverse().join("");
+    var result = '';
+    for(let i = a.length - 1; i >= 0; i--) {
+        result += a[i];
+    }
+    return result;
 }
 
 console.log(balikKata('Hello World and Coders')); // sredoC dna dlroW olleH

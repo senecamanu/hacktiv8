@@ -1,30 +1,20 @@
-function xo(s) {
+function xo(str) {
+  var x = 0, o = 0;
 
-  var x = 0;
-  var o = 0;
-  var ssplit = s.split('');
-  var scount = 0;
-
-// while loop
-  while(scount < s.length) {
-    if (ssplit[scount] == 'x') {
+  for(let i = 0; i < str.length; i++) {
+    if (str[i] == 'x') {
       x++;
     }
-
     else {
       o++;
     }
-    scount++;
   }
 
   if (x == o) {
     return true;
   }
-
   else {
     return false;
   }
-
 }
-
 console.log(xo('xooxox'));
