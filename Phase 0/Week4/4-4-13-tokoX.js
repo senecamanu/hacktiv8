@@ -19,7 +19,7 @@ var result = [];
         if(shoppers[c].amount <= leftOverNum) {
           shoppersArray.push(shoppers[c].name);
           leftOverNum = leftOverNum - shoppers[c].amount;
-          totalProfitFinal = shoppers[c].amount * listBarang[i][1];
+          totalProfitFinal += shoppers[c].amount * listBarang[i][1];
         }
       }
     }

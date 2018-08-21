@@ -11,7 +11,9 @@ function changeMe(arr) {
     if(result.age == undefined) {
       result.age = 'Invalid Birth Year';
     }
-    console.log(result);
+
+    console.log(
+      `${i + 1}. ${result.firstName} ${result.lastName}:`, result);
 
   }
 }

@@ -10,28 +10,34 @@ function shoppingTime(memberId, money) {
   var result = {
     memberId: memberId,
     money: money,
-    listPurchased: []
+    listPurchased: [],
+    changeMoney: money
   }
 
-if(memberId === undefined) {
-  result = 'Mohon maaf, toko X hanya berlaku untuk member saja';
-}
+  if(memberId === undefined) {
+    result = 'Mohon maaf, toko X hanya berlaku untuk member saja';
+  }
 
-else if(memberId.length >= 1) {
-  for (i = 0; i < products.productName.length; i++) {
-    if (moneyTemp > products.productPrice[i]) {
-      result.listPurchased.push(products.productName[i]);
+  else if(memberId.length >= 1) {
+    for (i = 0; i < products.productName.length; i++) {
+      if (moneyTemp > products.productPrice[i]) {
+        result.listPurchased.push(products.productName[i]);
 
-      moneyTemp - products.productPrice[0];
+        moneyTemp -= products.productPrice[i];
+        result.changeMoney -= products.productPrice[i];
+      }
     }
   }
-}
 
-else {
-  result = 'Mohon maaf, toko X hanya berlaku untuk member saja';
-}
+  else {
+    result = 'Mohon maaf, toko X hanya berlaku untuk member saja';
+  }
 
-  return result;
+  if (result.listPurchased == 0) {
+    result = 'Mohon maaf, uang tidak cukup'
+  }
+    return result;
+  
 }
 
 // TEST CASES

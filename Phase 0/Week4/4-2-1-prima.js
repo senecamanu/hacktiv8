@@ -1,27 +1,26 @@
 function angkaPrima(angka) {
-
 //gets out the basic 3 number first
 
-var result = true;
+  var result = true;
 
-  if(angka < 0) {
-    result = false;
-  }
-
-  else if(angka > 0 && angka <= 3) {
-    result = true;
-  }
-  else {
-    for(i = 2; i < angka; i++) {
-      if (Number.isInteger(angka/i)) {
-        result = false;
+    if(angka < 0 || angka == 1) {
+      result = false;
+    }
+    else if(angka > 0 && angka <= 3) {
+      result = true;
+    }
+    else {
+      for(i = 2; i < angka; i++) {
+        if (Number.isInteger(angka/i)) {
+          result = false;
+          }
         }
       }
-    }
   return result;
 }
 
 // TEST CASES
+console.log(angkaPrima(1)); // false
 console.log(angkaPrima(3)); // true
 console.log(angkaPrima(7)); // true
 console.log(angkaPrima(6)); // false
