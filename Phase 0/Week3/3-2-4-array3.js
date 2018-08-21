@@ -1,6 +1,11 @@
 var input = ["0001", "Roman Alamsyah ", "Bandar Lampung", "21/05/1989", "Membaca"];
 
 function dataHandling2(input) {
+
+  function numberAs(a, b) {
+    return a - b;
+  }
+
   input[1] = input[1] + 'Elsharawy';
   input[2] = 'Provinsi ' + input[2];
   input.splice(4, 1, "Pria", "SMA Internasional Metro");
@@ -51,7 +56,6 @@ function dataHandling2(input) {
   var name2 = input[1].split(" ");
   name2.splice(2, 1);
   var name3 = name2.join(" ");
-
 
 //testing
   console.log(input);

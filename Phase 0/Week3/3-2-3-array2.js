@@ -5,11 +5,10 @@ var input = [
                 ["0003", "Winona", "Ambon", "25/12/1965", "Memasak"],
                 ["0004", "Bintang Senjaya", "Martapura", "6/4/1970", "Berkebun"]
             ]
-var start = 0;
-
 
 //function
 function dataHandling(input) {
+  var start = 0;
   while (start < input.length) {
     console.log('Nomor ID: ' + input[start][0]);
     console.log('Nama Lengkap: ' + input[start][1]);

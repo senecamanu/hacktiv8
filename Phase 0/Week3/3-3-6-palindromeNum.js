@@ -1,22 +1,23 @@
 function numPalindrome(num) {
   var numRev = num.toString().split('').reverse().join(''); //to string, split, reverse, join.
 
+  function findPalindrome(x) {
+    while (x != x.toString().split('').reverse().join('')) {
+      x++;
+    }
+    return x;
+  }
+
+  var nextPalindrome;
+
   if (num == numRev) {
-    return 'hell ye';
+    num++;
+    nextPalindrome = findPalindrome(num);
+    //return the value so it works when console.log()
+    return nextPalindrome;
   }
   else {
-    //make the function
-    function findPalindrome(x) {
-      var x = x++;
-      while (x != x.toString().split('').reverse().join('')) {
-        x++;
-      }
-      return x;
-    }
-
-    // make it a var
-    var nextPalindrome = findPalindrome(num);
-    //return the value so it works when console.log()
+    nextPalindrome = findPalindrome(num);
     return nextPalindrome;
   }
 }

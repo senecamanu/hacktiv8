@@ -1,26 +1,27 @@
 // TUGAS 1
 var rows1 = 5;
-var init1 = 0;
 
-while (init1 < rows1) {
+for (let i = 0; i < rows1; i++) {
   console.log('*');
-  init1++;
 }
 
 // TUGAS 2
 var rows2 = 5;
-var init2 = 0;
+var toPrint = '';
 
-while (init2 < rows2) {
-  console.log('*'.repeat(rows2));
-  init2++;
+for (let n = 0; n < rows2; n++) {
+  toPrint += '*';
+}
+
+for(let c = 0; c < rows2; c++) {
+  console.log(toPrint);
 }
 
 // TUGAS 3
 var rows3 = 5;
-var init3 = 0;
+var init3 = '';
 
-while (init3 <= rows3) {
-  console.log('*'.repeat(init3));
-  init3++;
+for (let z = 0; z < rows3; z++) {
+  init3 += '*';
+  console.log(init3);
 }
