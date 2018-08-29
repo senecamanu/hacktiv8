@@ -4,11 +4,11 @@ function angkaPrima(angka) {
 
 var result = true;
 
-  if(angka < 0) {
+  if(angka < 2) {
     result = false;
   }
 
-  else if(angka > 0 && angka <= 3) {
+  else if(angka > 1 && angka <= 3) {
     result = true;
   }
   else {
