@@ -7,8 +7,15 @@ function highestScore (students) {
     var score = students[i].score;
     var batch = students[i].class;
 
+    // Pushing to result if empty;
     if (result[students[i].class] === undefined) {
-      result[batch] = {name: name, score: score}
+      result[batch] = {name: name, score: score};
+    }
+
+    else if (result[students[i].class] != undefined) {
+      if (result[students[i].class].score < score) {
+        result[batch] = {name: name, score: score};
+      }
     }
   }
   return result;
