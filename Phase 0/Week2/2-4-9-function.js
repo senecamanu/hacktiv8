@@ -21,8 +21,8 @@ console.log(hasilPerkalian);
 
 // tugas 3
 
-function processSentence(a,b,c,d) {
-  return "Nama saya " + a + ", umur saya " + b + " tahun, alamat saya di " + c + ", dan saya punya hobby yaitu " + d + "!";
+function processSentence(name, age,address, hobby) {
+  return "Nama saya " + name + ", umur saya " + age + " tahun, alamat saya di " + address + ", dan saya punya hobby yaitu " + hobby + "!";
 }
 
 var name = "Agus";
